@@ -1,18 +1,19 @@
 
 public class MeuSistema {
-	
-	InterfaceBancoDados ibd = new BDAcess();
+	public static void Main(String[] argas) {
+	InterfaceBancoDados ibd = new BDMysql();
 	
 
 	
 	//CONECTAR NO BANCO DE DADOS
-	ibd.executar();
+	ibd.conectar();
 	
 	//RECUPERAR DADOS
 	ibd.executar("select * from tb_clientes");
 	
 	//DESCONECTAR
 	ibd.desconectar();
-
+	
+	}
 }
 
